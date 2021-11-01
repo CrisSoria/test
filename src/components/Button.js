@@ -26,11 +26,25 @@ export default function Button({
   btnLink = "test",
   outline = false,
 }) {
+  const link = () => {
+    if (btnText === "Download CV") {
+      return (
+        <Link className="button" to={btnLink} target="_blank" download>
+          {btnText}
+        </Link>
+      );
+    } else {
+      return (
+        <Link className="button" to={btnLink}>
+          {btnText}
+        </Link>
+      );
+    }
+  };
+
   return (
     <ButtonStyle outline={outline} className="button-wrapper">
-      <Link className="button" to={btnLink}>
-        {btnText}
-      </Link>
+      {link()}
     </ButtonStyle>
   );
 }

@@ -1,7 +1,9 @@
-import React from 'react';
-import styled from 'styled-components';
-import FooterCol from './FooterCol';
-import PText from './PText';
+import React from "react";
+import styled from "styled-components";
+import FooterCol from "./FooterCol";
+import PText from "./PText";
+
+import logo from "../assets/images/logo.svg";
 
 const FooterStyle = styled.div`
   background-color: var(--deep-dark);
@@ -29,6 +31,11 @@ const FooterStyle = styled.div`
     margin-top: 5rem;
     .para {
       margin-left: 0;
+      padding-top: 1rem;
+    }
+    .logo {
+      width: 60px;
+      margin: 0;
     }
   }
   @media only screen and (max-width: 768px) {
@@ -47,6 +54,9 @@ const FooterStyle = styled.div`
         div {
           margin-top: 0;
         }
+        .logo {
+          display: none;
+        }
       }
     }
   }
@@ -57,36 +67,36 @@ export default function Footer() {
     <FooterStyle>
       <div className="container">
         <div className="footer__col1">
-          <h1 className="footer__col1__title">Ayan Khan</h1>
+          <h1 className="footer__col1__title">Cristian Soria</h1>
           <PText>
-            A freelance web designer and developer from Chittagong, Bangladesh.
-            I always make websites that have unique designs and also has a good
-            performance rate.
+            Full Stack Developer de Salta, Argentina. Siempre dispuesto a
+            continuar aprendiendo. Con impulso constante en la búsqueda de
+            mejores soluciones para emprender.
           </PText>
         </div>
         <div className="footer__col2">
           <FooterCol
-            heading="Important Links"
+            heading="Web Links"
             links={[
               {
-                title: 'Home',
-                path: '/',
-                type: 'Link',
+                title: "Home",
+                path: "/",
+                type: "Link",
               },
               {
-                type: 'Link',
-                title: 'About',
-                path: '/about',
+                type: "Link",
+                title: "About",
+                path: "/about",
               },
               {
-                type: 'Link',
-                title: 'Projects',
-                path: '/projects',
+                type: "Link",
+                title: "Projects",
+                path: "/projects",
               },
               {
-                type: 'Link',
-                title: 'Contact',
-                path: '/contact',
+                type: "Link",
+                title: "Contact",
+                path: "/contact",
               },
             ]}
           />
@@ -96,35 +106,31 @@ export default function Footer() {
             heading="Contact Info"
             links={[
               {
-                title: '+88012312',
-                path: 'tel:+88012312',
+                title: "+543876004180",
+                path: "tel:+543876004180",
               },
               {
-                title: 'webcifar@gmail.com',
-                path: 'mailto:webcifar@gmail.com',
+                title: "crissoria07@gmail.com",
+                path: "mailto:crissoria07@gmail.com",
               },
               {
-                title: 'GEC Circle, Chittagong, Bangladesh',
-                path: 'http://google.com/maps',
+                title: "Salta Capital, Argentina",
+                path: "http://google.com/maps",
               },
             ]}
           />
         </div>
         <div className="footer__col4">
           <FooterCol
-            heading="social Links"
+            heading="Social Links"
             links={[
               {
-                title: 'Facebook',
-                path: 'http://facebook.com',
+                title: "LinkedIn",
+                path: "https://www.linkedin.com/in/crissoria/",
               },
               {
-                title: 'Twitter',
-                path: 'http://twitter.com',
-              },
-              {
-                title: 'Instagram',
-                path: 'http://instagram.com',
+                title: "GitHub",
+                path: "https://github.com/CrisSoria",
               },
             ]}
           />
@@ -132,12 +138,8 @@ export default function Footer() {
       </div>
       <div className="copyright">
         <div className="container">
-          <PText>
-            © 2021 - Ayan Khan | Designed By{' '}
-            <a target="_blank" rel="noreferrer" href="http://webcifar.com">
-              web cifar
-            </a>{' '}
-          </PText>
+          <img className="logo" src={logo} alt="logo" />{" "}
+          <PText>© 2021 - Designed By CrisSoria</PText>
         </div>
       </div>
     </FooterStyle>

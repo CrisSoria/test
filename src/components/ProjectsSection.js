@@ -1,11 +1,12 @@
-import React from 'react';
-import styled from 'styled-components';
-import { Swiper, SwiperSlide } from 'swiper/react';
-import SwiperCore, { Navigation } from 'swiper';
-import ProjectItem from './ProjectItem';
-import SectionTitle from './SectionTitle';
-import 'swiper/swiper-bundle.min.css';
-import projects from '../assets/data/projects';
+import React from "react";
+import styled from "styled-components";
+import { Swiper, SwiperSlide } from "swiper/react";
+import SwiperCore, { Navigation } from "swiper";
+import ProjectItem from "./ProjectItem";
+import SectionTitle from "./SectionTitle";
+import "swiper/swiper-bundle.min.css";
+
+import projects from "../assets/data/projects";
 
 // install Swiper modules
 SwiperCore.use([Navigation]);
@@ -57,11 +58,13 @@ const ProjectSectionStyle = styled.div`
 `;
 
 export default function ProjectsSection() {
-  // console.log(projects);
   return (
     <ProjectSectionStyle>
       <div className="container">
-        <SectionTitle subheading="some of my recent works" heading="Projects" />
+        <SectionTitle
+          subheading="Trabajos más representativos"
+          heading="Proyectos"
+        />
         <div className="projects__allItems">
           <Swiper
             spaceBetween={30}

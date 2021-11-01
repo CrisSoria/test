@@ -1,7 +1,7 @@
-import React from 'react';
-import styled from 'styled-components';
-import Button from './Button';
-import PText from './PText';
+import React from "react";
+import styled from "styled-components";
+import Button from "./Button";
+import PText from "./PText";
 
 const ContactBannerStyles = styled.div`
   padding: 5rem 0;
@@ -27,9 +27,9 @@ export default function ContactBanner() {
     <ContactBannerStyles>
       <div className="container">
         <div className="contactBanner__wrapper">
-          <PText>Have a project in mind</PText>
-          <h3 className="contactBanner__heading">Let me help you</h3>
-          <Button btnText="Contact Now" btnLink="/contact" />
+          <PText>¿Tenés un proyecto en mente?</PText>
+          <h3 className="contactBanner__heading">¡Hagámoslo realidad!</h3>
+          <Button btnText="Contáctame" btnLink="/contact" />
         </div>
       </div>
     </ContactBannerStyles>

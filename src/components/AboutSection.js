@@ -1,9 +1,9 @@
-import React from 'react';
-import styled from 'styled-components';
-import Button from './Button';
-import PText from './PText';
-import SectionTitle from './SectionTitle';
-import AboutImg from '../assets/images/about-sec-img.png';
+import React from "react";
+import styled from "styled-components";
+import Button from "./Button";
+import PText from "./PText";
+import SectionTitle from "./SectionTitle";
+import AboutImg from "../assets/images/about-sec-img.png";
 
 const AboutSectionStyles = styled.div`
   padding: 10rem 0;
@@ -75,18 +75,16 @@ export default function AboutSection() {
     <AboutSectionStyles>
       <div className="container">
         <div className="aboutSection__left">
-          <SectionTitle
-            subheading="Let me introduce myself"
-            heading="About Me"
-          />
+          <SectionTitle subheading="Full Stack Developer" heading="Sobre mí" />
           <PText>
-            I am a freelance website designer and developer from Chittagong,
-            Bangladesh. I create professional websites. I love art and always
-            try to show unique views to the audience through my design.
+            Siempre dispuesto a continuar aprendiendo. Con impulso constante en
+            la búsqueda de mejores soluciones para emprenderlas. <br />
+            Me apasiona desarrollar aplicaciones que resuelvan problematicas y
+            satisfagan necesidades.
           </PText>
           <div className="aboutSection__buttons">
-            <Button btnText="Works" btnLink="/projects" />
-            <Button btnText="Read More" btnLink="/about" outline />
+            <Button btnText="Trabajos" btnLink="/projects" />
+            <Button btnText="Ver más" btnLink="/about" outline />
           </div>
         </div>
         <div className="aboutSection__right">

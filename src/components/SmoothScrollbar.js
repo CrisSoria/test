@@ -1,12 +1,20 @@
-import { useEffect } from 'react';
-import { useLocation } from 'react-router-dom';
+import React, { useEffect, useRef } from "react";
+import { useLocation } from "react-router-dom"; //debe ser ...-dom
+import ScrollBar from "react-smooth-scrollbar";
 
-export default function ScrollToTop() {
+export default function SmoothScrollbar({ children }) {
+  const ref = useRef(null);
   const { pathname } = useLocation();
 
+  //para que las paginas se muestren por defecto desde el inicio
   useEffect(() => {
-    window.scrollTo(0, 0);
+    const { scrollbar } = ref.current;
+    scrollbar.setPosition(0, 0);
   }, [pathname]);
 
-  return null;
+  return (
+    <ScrollBar ref={ref} damping=".09">
+      {children}
+    </ScrollBar>
+  );
 }

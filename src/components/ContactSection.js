@@ -1,9 +1,9 @@
-import React from 'react';
-import styled from 'styled-components';
-import { MdEmail, MdLocalPhone } from 'react-icons/md';
-import ContactForm from './ContactForm';
-import ContactInfoItem from './ContactInfoItem';
-import SectionTitle from './SectionTitle';
+import React from "react";
+import styled from "styled-components";
+import { MdEmail, MdLocalPhone } from "react-icons/md";
+import ContactForm from "./ContactForm";
+import ContactInfoItem from "./ContactInfoItem";
+import SectionTitle from "./SectionTitle";
 
 const ContactSectionStyle = styled.div`
   padding: 10rem 0;
@@ -16,7 +16,7 @@ const ContactSectionStyle = styled.div`
   }
   .contactSection__wrapper::after {
     position: absolute;
-    content: '';
+    content: "";
     width: 2px;
     height: 50%;
     background-color: var(--gray-1);
@@ -55,12 +55,12 @@ export default function ContactSection() {
   return (
     <ContactSectionStyle>
       <div className="container">
-        <SectionTitle heading="contact" subheading="get in touch" />
+        <SectionTitle heading="contact" subheading="¡Encantado de conocerte!" />
         <div className="contactSection__wrapper">
           <div className="left">
-            <ContactInfoItem icon={<MdLocalPhone />} text="+8801231" />
-            <ContactInfoItem icon={<MdEmail />} text="webcifar@gmail.com" />
-            <ContactInfoItem text="Chittagong, Bangladesh" />
+            <ContactInfoItem icon={<MdLocalPhone />} text="+543876004180" />
+            <ContactInfoItem icon={<MdEmail />} text="crissoria07@gmail.com" />
+            <ContactInfoItem text="Salta, Argentina" />
           </div>
           <div className="right">
             <ContactForm />

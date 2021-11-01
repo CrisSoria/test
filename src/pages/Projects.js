@@ -1,9 +1,9 @@
-import React, { useEffect, useState } from 'react';
-import styled from 'styled-components';
-import { MdSearch } from 'react-icons/md';
-import SectionTitle from '../components/SectionTitle';
-import ProjectsInfo from '../assets/data/projects';
-import ProjectItem from '../components/ProjectItem';
+import React, { useEffect, useState } from "react";
+import styled from "styled-components";
+import { MdSearch } from "react-icons/md";
+import SectionTitle from "../components/SectionTitle";
+import ProjectsInfo from "../assets/data/projects";
+import ProjectItem from "../components/ProjectItem";
 
 const ProjectStyle = styled.div`
   padding: 10rem 0;
@@ -46,10 +46,10 @@ const ProjectStyle = styled.div`
 `;
 
 export default function Projects() {
-  const [searchText, setSearchText] = useState('');
+  const [searchText, setSearchText] = useState("");
   const [projectsData, setProjectsData] = useState(ProjectsInfo);
   useEffect(() => {
-    if (searchText === '') return;
+    if (searchText === "") return;
     setProjectsData(() =>
       ProjectsInfo.filter((item) =>
         item.name.toLowerCase().match(searchText.toLowerCase())
@@ -69,7 +69,7 @@ export default function Projects() {
         <div className="container">
           <SectionTitle
             heading="Projects"
-            subheading="some of my recent works"
+            subheading="algunos de mis trabajos recientes"
           />
           <div className="projects__searchBar">
             <form>

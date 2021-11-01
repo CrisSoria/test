@@ -1,8 +1,8 @@
-import React from 'react';
-import { MdDesktopMac, MdCode, MdPhonelinkSetup } from 'react-icons/md';
-import styled from 'styled-components';
-import SectionTitle from './SectionTitle';
-import ServicesSectionItem from './ServicesSectionItem';
+import React from "react";
+import { MdDesktopMac, MdCode, MdPhonelinkSetup } from "react-icons/md";
+import styled from "styled-components";
+import SectionTitle from "./SectionTitle";
+import ServicesSectionItem from "./ServicesSectionItem";
 
 const ServicesItemsStyles = styled.div`
   padding: 10rem 0;
@@ -27,22 +27,22 @@ export default function ServicesSection() {
   return (
     <ServicesItemsStyles>
       <div className="container">
-        <SectionTitle subheading="What i will do for you" heading="Services" />
+        <SectionTitle subheading="Que puedo hacer por ti" heading="Servicios" />
         <div className="services__allItems">
           <ServicesSectionItem
             icon={<MdDesktopMac />}
-            title="web design"
-            desc="I do ui/ux design for the website that helps website to get a unique look."
+            title="front end"
+            desc="Desarrollo de interfaz de usuario UI. Creación de interacciones de elementos UX. Posicionamiento de la marca de tu empresa SEO. Responsive Design."
           />
           <ServicesSectionItem
             icon={<MdCode />}
-            title="web dev"
-            desc="I also develop the websites. I create high performance website with blazing fast speed."
+            title="back end"
+            desc="Desarrollo de API REST. Deployment de server y database. Bases de datos relacionales y no relacionales."
           />
           <ServicesSectionItem
             icon={<MdPhonelinkSetup />}
             title="app Dev"
-            desc="I develop mobile application. I create mobile app with eye catching ui. "
+            desc="Desarrollo de aplicaciones nativas para IOS y Android"
           />
         </div>
       </div>
