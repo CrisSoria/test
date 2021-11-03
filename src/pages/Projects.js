@@ -4,6 +4,8 @@ import { MdSearch } from "react-icons/md";
 import SectionTitle from "../components/SectionTitle";
 import ProjectsInfo from "../assets/data/projects";
 import ProjectItem from "../components/ProjectItem";
+import { motion } from "framer-motion";
+import { pageTransition, pageVariants } from "../styles/transitions";
 
 const ProjectStyle = styled.div`
   padding: 10rem 0;
@@ -64,7 +66,13 @@ export default function Projects() {
     }
   };
   return (
-    <>
+    <motion.div
+      initial="initial"
+      animate="in"
+      exit="out"
+      variants={pageVariants}
+      transition={pageTransition}
+    >
       <ProjectStyle>
         <div className="container">
           <SectionTitle
@@ -96,6 +104,6 @@ export default function Projects() {
           </div>
         </div>
       </ProjectStyle>
-    </>
+    </motion.div>
   );
 }

@@ -1,5 +1,6 @@
 import React from "react";
-import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import { Route, Switch, useLocation } from "react-router-dom";
+import { AnimatePresence } from "framer-motion";
 import Footer from "./components/Footer";
 import NavMenu from "./components/NavMenu";
 import SmoothScrollbar from "./components/SmoothScrollbar";
@@ -10,13 +11,14 @@ import Home from "./pages/Home";
 import Projects from "./pages/Projects";
 
 export default function App() {
+  const location = useLocation();
   return (
     <>
-      <Router>
-        <NavMenu />
-        {/* <ScrollToTop /> */}
-        <SmoothScrollbar>
-          <Switch>
+      <NavMenu />
+      {/* <ScrollToTop /> */}
+      <SmoothScrollbar>
+        <AnimatePresence exitBeforeEnter>
+          <Switch location={location} key={location.pathname}>
             <Route path="/about">
               <About />
             </Route>
@@ -30,9 +32,9 @@ export default function App() {
               <Home />
             </Route>
           </Switch>
-          <Footer />
-        </SmoothScrollbar>
-      </Router>
+        </AnimatePresence>
+        <Footer />
+      </SmoothScrollbar>
     </>
   );
 }
