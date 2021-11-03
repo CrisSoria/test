@@ -9,7 +9,7 @@ const projects = [
   {
     id: uuidv4(),
     name: "Compu Henry",
-    desc: "Trabajo en equipo de 7 personas utilizando metodologías ágiles (SCRUM). Un mes de duración total, con springs semanales presentados a un product owner. Venta de insumos para computación con todas las funcionalidades de un e-commerce.",
+    desc: "Trabajo en equipo de 7 personas utilizando metodologías ágiles (SCRUM). Un mes de duración total, con springs semanales presentados a un product owner. Venta de insumos para computación con todas las funcionalidades de un E-commerce.",
     img: "https://i.ibb.co/rwk20kr/ecommerce.png",
     github: "https://github.com/CrisSoria/E-commerce",
     web: "https://compu-henry.netlify.app",

@@ -1,7 +1,7 @@
-import React from 'react';
-import styled from 'styled-components';
-import MapImg from '../assets/images/map.png';
-import PText from './PText';
+import React from "react";
+import styled from "styled-components";
+import MapImg from "../assets/images/map1.png";
+import PText from "./PText";
 
 const MapStyles = styled.div`
   background: url(${MapImg}) no-repeat;
@@ -48,15 +48,15 @@ export default function Map() {
     <MapStyles>
       <div className="container">
         <div className="map__card">
-          <h3 className="map__card__heading">Here is me</h3>
-          <PText>GEC circle, Chittagong, Bangladesh</PText>
+          <h3 className="map__card__heading">Estoy aquí</h3>
+          <PText>Salta Capital, Salta, Argentina</PText>
           <a
             className="map__card__link"
-            href="https://www.google.com/maps/place/GEC+More,+Chittagong/@22.3590818,91.8195583,17z/data=!3m1!4b1!4m5!3m4!1s0x30acd89aaa8239cd:0x6e65fa00001dd59f!8m2!3d22.3590715!4d91.8215486"
+            href="https://www.google.com/maps/place/Salta/@-24.7960685,-65.500669,12z/data=!3m1!4b1!4m5!3m4!1s0x941bc3a35151b7f9:0xa5cd992cd587f206!8m2!3d-24.7821269!4d-65.4231976"
             target="_blank"
             rel="noreferrer"
           >
-            Open in google map
+            Abrir en google map
           </a>
         </div>
       </div>
