@@ -5,6 +5,8 @@ import Button from "../components/Button";
 import AboutImg from "../assets/images/about-page-img2.png";
 import AboutInfoItem from "../components/AboutInfoItem";
 import ContactBanner from "../components/ContactBanner";
+import { motion } from "framer-motion";
+import { pageTransition, pageVariants } from "../styles/transitions";
 
 const AboutPageStyles = styled.div`
   padding: 20rem 0 10rem 0;
@@ -81,8 +83,14 @@ const AboutPageStyles = styled.div`
 
 export default function About() {
   return (
-    <>
-      <AboutPageStyles>
+    <motion.div
+      initial="initial"
+      animate="in"
+      exit="out"
+      variants={pageVariants}
+      transition={pageTransition}
+    >
+      <AboutPageStyles className="page">
         <div className="container">
           <div className="top-section">
             <div className="left">
@@ -191,6 +199,6 @@ export default function About() {
         </div>
         <ContactBanner />
       </AboutPageStyles>
-    </>
+    </motion.div>
   );
 }

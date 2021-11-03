@@ -13,7 +13,7 @@ export default function SmoothScrollbar({ children }) {
   }, [pathname]);
 
   return (
-    <ScrollBar ref={ref} damping={0.09}>
+    <ScrollBar ref={ref} damping={0.15}>
       {children}
     </ScrollBar>
   );
