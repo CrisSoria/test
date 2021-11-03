@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import HeroImg from "../assets/images/hero1.png";
+import HeroImg from "../assets/images/hero5.png";
 import Button from "./Button";
 import SocialMediaArrow from "../assets/images/social-media-arrow.svg";
 import ScrollDownArrow from "../assets/images/scroll-down-arrow.svg";
@@ -35,12 +35,12 @@ const HeroStyles = styled.div`
   }
   .hero__img {
     max-width: 900px;
-    width: 100%;
+    /* width: 100%; */
     height: 600px;
     margin: 0 auto;
     border: 2px solid var(--gray-1);
     img {
-      object-fit: contain;
+      /* object-fit: contain; */
     }
   }
   .hero__info {
@@ -168,7 +168,7 @@ export default function HeroSection() {
               Desarrollador web apasionado por la imprementación de soluciones
               creativas
             </PText>
-            <Button btnText="ver mis trabajos" btnLink="/projects" />
+            <Button btnText="Ver mis proyectos" btnLink="/projects" />
           </div>
           <div className="hero__social">
             <div className="hero__social__indicator">

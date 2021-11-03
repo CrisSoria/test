@@ -13,7 +13,9 @@ const GlobalStyles = createGlobalStyle`
     --gray-2: #363636;
     --white : white;
     --black: black;
-    --cian: #3da3c6;
+    ${"" /* --cian: #00ffff; */}
+    --cian: #8bffff;
+    
   }
   html{
     font-size: 10px;

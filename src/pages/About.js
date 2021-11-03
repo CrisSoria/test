@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import PText from "../components/PText";
 import Button from "../components/Button";
-import AboutImg from "../assets/images/about-page-img.png";
+import AboutImg from "../assets/images/about-page-img2.png";
 import AboutInfoItem from "../components/AboutInfoItem";
 import ContactBanner from "../components/ContactBanner";
 
@@ -48,6 +48,7 @@ const AboutPageStyles = styled.div`
   .right {
     img {
       border: 2px solid var(--gray-1);
+      filter: grayscale(1);
     }
   }
   .about__info__items {

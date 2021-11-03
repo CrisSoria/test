@@ -31,7 +31,8 @@ const ProjectItemStyles = styled.div`
   }
   .web,
   .github {
-    font-size: 1.2rem;
+    letter-spacing: 0.2rem;
+    font-size: 1.4rem;
     padding: 0.7em 2em;
     border-radius: 7px;
     display: inline-block;
@@ -46,11 +47,12 @@ const ProjectItemStyles = styled.div`
   }
   .web span {
     color: var(--black);
+    font-weight: bold;
   }
   .github span {
     color: var(--gray-1);
   }
-  //fdssaf
+  //efecto hover
   .boton {
     transition: 0.3s ease all;
     position: relative;
@@ -82,6 +84,7 @@ const ProjectItemStyles = styled.div`
   }
   .boton:hover span {
     color: var(--black);
+    font-weight: bold;
   }
   @media only screen and (max-width: 768px) {
     .projectItem__img {

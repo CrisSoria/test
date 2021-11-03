@@ -39,6 +39,7 @@ const ButtonStyle = styled.div`
   }
   .button:hover span {
     color: var(--gray-2);
+    font-weight: bold;
   }
 
   .button:hover::after {

@@ -3,7 +3,9 @@ import styled from "styled-components";
 import Button from "./Button";
 import PText from "./PText";
 import SectionTitle from "./SectionTitle";
-import AboutImg from "../assets/images/about-sec-img.png";
+// import AboutImg from "../assets/images/about-sec-img.png";
+import aboutHome from "../assets/images/aboutHome.png";
+import aboutMin from "../assets/images/aboutMin.png";
 
 const AboutSectionStyles = styled.div`
   padding: 10rem 0;
@@ -16,6 +18,34 @@ const AboutSectionStyles = styled.div`
   .aboutSection__left,
   .aboutSection__right {
     flex: 1;
+    /* border: 1px solid red; */
+  }
+  //fgerger
+  .aboutSection__right {
+    position: relative;
+    height: 400px;
+  }
+  .aboutImgMin,
+  .aboutImgMax {
+    filter: grayscale(1);
+    border: 4px solid var(--gray-2);
+    border-radius: 12px;
+    /* overflow: hidden; */
+    object-fit: cover;
+  }
+  .aboutImgMax {
+    max-width: 80%;
+    height: 300px;
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+  .aboutImgMin {
+    max-width: 40%;
+    height: 200px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
   }
   .section-title {
     text-align: left;
@@ -49,6 +79,7 @@ const AboutSectionStyles = styled.div`
       width: 100%;
     }
     .aboutSection__right {
+      display: none;
       margin-top: 3rem;
     }
     .section-title {
@@ -88,7 +119,9 @@ export default function AboutSection() {
           </div>
         </div>
         <div className="aboutSection__right">
-          <img className="aboutImg" src={AboutImg} alt="Img" />
+          {/* <img className="aboutImg" src={AboutImg} alt="Img" /> */}
+          <img src={aboutHome} alt="img1" className="aboutImgMax" />
+          <img src={aboutMin} alt="img2" className="aboutImgMin" />
         </div>
       </div>
     </AboutSectionStyles>
