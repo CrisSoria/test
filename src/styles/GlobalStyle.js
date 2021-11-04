@@ -13,7 +13,6 @@ const GlobalStyles = createGlobalStyle`
     --gray-2: #363636;
     --white : white;
     --black: black;
-    ${"" /* --cian: #00ffff; */}
     --cian: #8bffff;
     
   }

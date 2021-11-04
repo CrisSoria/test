@@ -11,7 +11,6 @@ import { pageTransition, pageVariants } from "../styles/transitions";
 export default function Home() {
   return (
     <motion.div
-      // style={pageStyle}
       initial="initial"
       animate="in"
       exit="out"

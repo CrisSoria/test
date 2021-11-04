@@ -20,7 +20,7 @@ const AboutSectionStyles = styled.div`
     flex: 1;
     /* border: 1px solid red; */
   }
-  //fgerger
+  //imagenes superpuestas
   .aboutSection__right {
     position: relative;
     height: 400px;
@@ -110,7 +110,7 @@ export default function AboutSection() {
           <PText>
             Siempre dispuesto a continuar aprendiendo. Con impulso constante en
             la búsqueda de mejores soluciones para emprenderlas. <br />
-            Me apasiona desarrollar aplicaciones que resuelvan problematicas y
+            Me apasiona desarrollar aplicaciones que resuelvan problemáticas y
             satisfagan necesidades.
           </PText>
           <div className="aboutSection__buttons">

@@ -149,6 +149,13 @@ const HeroStyles = styled.div`
       }
     }
   }
+  @media only screen and (min-width: 768px) {
+    .hero__info {
+      p {
+        color: var(--white);
+      }
+    }
+  }
 `;
 
 export default function HeroSection() {

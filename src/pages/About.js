@@ -104,8 +104,8 @@ export default function About() {
                   resolución de problemas. Descubrí la programación en la
                   universidad mientras estudiaba Ingeniería Civil.
                   <br /> <br />
-                  Durante mis experiencias laborales me di cuenta que mediante
-                  el código podía automatizar tareas que eran repetitivas
+                  Durante mis experiencias laborales, me di cuenta que mediante
+                  el código, podía automatizar tareas que eran repetitivas
                   mejorando mi productividad y disminuyendo errores.
                   <br /> <br />
                   Para poder realizar mis primeros programas me convertí en
@@ -125,7 +125,7 @@ export default function About() {
                   adquirir experiencia en proyectos trabajando en equipo.
                 </PText>
               </div>
-              <Button btnText="Descargar CV" btnLink="/Cristian-Soria-CV.pdf" />
+              <Button btnText="Descargar CV" btnLink="/Cristian_Soria_CV.pdf" />
             </div>
             <div className="right">
               <img src={AboutImg} alt="me" />

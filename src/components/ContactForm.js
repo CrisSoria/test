@@ -2,11 +2,9 @@ import React, { useRef, useState } from "react";
 import styled from "styled-components";
 
 import emailjs from "emailjs-com";
-import dotenv from "dotenv";
-dotenv.config();
-const MAIL_SERVICE_ID = process.env.MAIL_SERVICE_ID || "service_cneg5fg";
-const MAIL_TEMPLATE_ID = process.env.MAIL_TEMPLATE_ID || "template_br7cdbc";
-const MAIL_USER_ID = process.env.MAIL_USER_ID || "user_sZzDr5dyFG6WxUQ9wppn2";
+const MAIL_SERVICE_ID = process.env.REACT_APP_MAIL_SERVICE_ID;
+const MAIL_TEMPLATE_ID = process.env.REACT_APP_MAIL_TEMPLATE_ID;
+const MAIL_USER_ID = process.env.REACT_APP_MAIL_USER_ID;
 
 const FormStyle = styled.form`
   width: 100%;
