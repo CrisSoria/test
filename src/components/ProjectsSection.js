@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import styled from "styled-components";
 import { Swiper, SwiperSlide } from "swiper/react";
 import SwiperCore, { Navigation } from "swiper";
@@ -6,7 +6,7 @@ import ProjectItem from "./ProjectItem";
 import SectionTitle from "./SectionTitle";
 import "swiper/swiper-bundle.min.css";
 
-import projects from "../assets/data/projects";
+import projectsAux from "../assets/data/projects";
 
 // install Swiper modules
 SwiperCore.use([Navigation]);
@@ -58,6 +58,21 @@ const ProjectSectionStyle = styled.div`
 `;
 
 export default function ProjectsSection() {
+  const [projects, setProjects] = useState(projectsAux);
+  useEffect(() => {
+    const JSONBIN_URL = process.env.REACT_APP_JSONBIN_URL;
+    const JSONBIN_KEY = process.env.REACT_APP_JSONBIN_KEY;
+    fetch(JSONBIN_URL, {
+      headers: {
+        "secret-key": "$2b$10$" + JSONBIN_KEY,
+      },
+    })
+      .then((response) => response.json())
+      .then((data) => {
+        setProjects(data);
+      })
+      .catch((error) => console.log(error));
+  }, []);
   return (
     <ProjectSectionStyle>
       <div className="container">

@@ -51,6 +51,20 @@ export default function Projects() {
   const [searchText, setSearchText] = useState("");
   const [projectsData, setProjectsData] = useState(ProjectsInfo);
   useEffect(() => {
+    const JSONBIN_URL = process.env.REACT_APP_JSONBIN_URL;
+    const JSONBIN_KEY = process.env.REACT_APP_JSONBIN_KEY;
+    fetch(JSONBIN_URL, {
+      headers: {
+        "secret-key": "$2b$10$" + JSONBIN_KEY,
+      },
+    })
+      .then((response) => response.json())
+      .then((data) => {
+        setProjectsData(data);
+      })
+      .catch((error) => console.log(error));
+  }, []);
+  useEffect(() => {
     if (searchText === "") return;
     setProjectsData(() =>
       ProjectsInfo.filter((item) =>

@@ -7,30 +7,32 @@ const AboutItemStyles = styled.div`
   display: flex;
   align-items: center;
   justify-content: flex-start;
-  position: relative;
-  /* gap: 5rem; */
+  min-width: 95vh;
   margin-top: 3rem;
   .title {
+    min-width: 13rem;
     font-size: 2.4rem;
   }
   .items {
-    display: flex;
+    display: inline-block;
     gap: 1.5rem;
-    position: absolute;
-    left: 18rem;
+    margin-left: 2rem;
   }
   .item {
     background-color: var(--deep-dark);
     padding: 1rem;
     border-radius: 8px;
+    display: inline-block;
+    margin: 0.3rem;
   }
   @media only screen and (max-width: 768px) {
     flex-direction: column;
     align-items: flex-start;
     gap: 1rem;
     .items {
-      position: initial;
+      max-width: 80vw;
       gap: 1rem;
+      display: inline-block;
     }
     .title {
       font-size: 2rem;
